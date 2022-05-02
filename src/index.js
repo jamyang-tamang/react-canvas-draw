@@ -193,7 +193,7 @@ export default class CanvasDraw extends PureComponent {
     context.globalCompositeOperation = "destination-over";
 
     // If "useBgImage" has been set to true, this takes precedence over the background colour parameter
-    if (useBgImage) {
+    
       if (!this.props.imgSrc) return "Background image source not set";
       
       console.log("Triggered");
@@ -203,7 +203,7 @@ export default class CanvasDraw extends PureComponent {
           
       // Write the background image
       drawImage({ctx: context,img: final,x: 0,y: 0,w: this.props.canvasWidth, h: this.props.canvasHeight});
-    } else if (backgroundColour != null) {
+    if (backgroundColour != null) {
       //set background color
       context.fillStyle = backgroundColour;
 
@@ -212,7 +212,7 @@ export default class CanvasDraw extends PureComponent {
     }
 
     // If the file type has not been specified, default to PNG
-    if (!fileType) fileType = "png";
+    if (!fileType) fileType = "jpeg";
 
     // Export the canvas to data URL
     let imageData = canvasToExport.toDataURL(`image/${fileType}`);
