@@ -196,9 +196,10 @@ export default class CanvasDraw extends PureComponent {
     if (useBgImage) {
       if (!this.props.imgSrc) return "Background image source not set";
       
-       var img = new Image();
-        img.src = this.props.imgSrc;
-        console.log(this.props.imgSrc)
+      console.log("Triggered);
+      var img = new Image();
+      img.src = this.props.imgSrc;
+
           
       // Write the background image
       drawImage({ctx: context,img: final,x: 0,y: 0,w: this.props.canvasWidth, h: this.props.canvasHeight});
