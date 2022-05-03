@@ -195,11 +195,10 @@ export default class CanvasDraw extends PureComponent {
     // If "useBgImage" has been set to true, this takes precedence over the background colour parameter
     
       if (!this.props.imgSrc) return "Background image source not set";
-      
-      console.log("Triggered");
+    
       var final = new Image();
       final.src = this.props.imgSrc;
-      console.log(this.props.imgSrc);
+      console.log("THIS: " + this.props.imgSrc);
 
           
       // Write the background image
@@ -219,7 +218,7 @@ export default class CanvasDraw extends PureComponent {
     let imageData = canvasToExport.toDataURL(`image/${fileType}`);
 
     //clear the canvas
-//     context.clearRect(0, 0, width, height);
+    context.clearRect(0, 0, width, height);
 
     //restore it with original / cached ImageData
     context.putImageData(storedImageData, 0, 0);
