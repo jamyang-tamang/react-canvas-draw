@@ -219,7 +219,7 @@ export default class CanvasDraw extends PureComponent {
     let imageData = canvasToExport.toDataURL(`image/${fileType}`);
 
     //clear the canvas
-    context.clearRect(0, 0, width, height);
+//     context.clearRect(0, 0, width, height);
 
     //restore it with original / cached ImageData
     context.putImageData(storedImageData, 0, 0);
