@@ -213,7 +213,7 @@ export default class CanvasDraw extends PureComponent {
     }
 
     // If the file type has not been specified, default to PNG
-    if (!fileType) fileType = "jpeg";
+    if (!fileType) fileType = "png";
 
     // Export the canvas to data URL
     let imageData = canvasToExport.toDataURL(`image/${fileType}`);
