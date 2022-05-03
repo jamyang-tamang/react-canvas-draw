@@ -193,17 +193,12 @@ export default class CanvasDraw extends PureComponent {
     context.globalCompositeOperation = "destination-over";
 
     // If "useBgImage" has been set to true, this takes precedence over the background colour parameter
-    
+    if (useBgImage) {
       if (!this.props.imgSrc) return "Background image source not set";
-    
-      var final = new Image();
-      final.src = this.props.imgSrc;
-      console.log("THIS: " + this.props.imgSrc);
 
-          
       // Write the background image
-      drawImage({ctx: context,img: final,x: 0,y: 0,w: this.props.canvasWidth, h: this.props.canvasHeight});
-    if (backgroundColour != null) {
+      drawImage({ctx: context,img: this.props.imgSrc,x: 0,y: 0,w: this.props.canvasWidth, h: this.props.canvasHeight});
+    } else if (backgroundColour != null) {
       //set background color
       context.fillStyle = backgroundColour;
 
