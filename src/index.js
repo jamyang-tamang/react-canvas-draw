@@ -176,7 +176,7 @@ export default class CanvasDraw extends PureComponent {
   getDataURL = (fileType, useBgImage, backgroundColour) => {
     // Get a reference to the "drawing" layer of the canvas
     let canvasToExport = this.canvas.drawing;
-
+    
     let context = canvasToExport.getContext("2d");
 
     //cache height and width
@@ -198,6 +198,7 @@ export default class CanvasDraw extends PureComponent {
       var final = new Image();
       final.src = this.props.imgSrc;
       // Write the background image
+      console.log(this.props.imgSrc)
       drawImage({ctx: context,img: final,x: 0,y: 0,w: this.props.canvasWidth, h: this.props.canvasHeight});
     } else if (backgroundColour != null) {
       //set background color
