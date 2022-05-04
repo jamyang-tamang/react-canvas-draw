@@ -199,7 +199,7 @@ export default class CanvasDraw extends PureComponent {
       final.src = this.props.imgSrc;
       // Write the background image
       console.log(this.props.imgSrc)
-      drawImage({ctx: context,img: final,x: 0,y: 0,w: this.props.canvasWidth, h: this.props.canvasHeight});
+      canvasToExport.drawImage({ctx: context,img: final,x: 0,y: 0,w: this.props.canvasWidth, h: this.props.canvasHeight});
     } else if (backgroundColour != null) {
       //set background color
       context.fillStyle = backgroundColour;
