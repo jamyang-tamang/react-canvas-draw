@@ -51,4 +51,6 @@ export default function drawImageProp({ctx, img, x, y, w, h, offsetX, offsetY} =
 
   // fill image in dest. rectangle
   ctx.drawImage(img, cx, cy, cw, ch, x, y, w, h);
+  console.log(cx + " " + cy+" "+cw+" "+ch);
+  
 }
