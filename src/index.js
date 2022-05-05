@@ -18,6 +18,8 @@ function midPointBtw(p1, p2) {
 }
 
 const canvasStyle = {
+  width: window.innerWidth, 
+  height: window.innerHeight,
   display: "block",
   position: "absolute",
 };
